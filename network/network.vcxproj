@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="afpacket_splitter.cpp" />
+    <ClCompile Include="epoll_reactor.cpp" />
+    <ClCompile Include="event_handler.cpp" />
+    <ClCompile Include="id_manager.cpp" />
+    <ClCompile Include="inet_addr.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="network_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="net_event.cpp" />
+    <ClCompile Include="net_manager.cpp" />
+    <ClCompile Include="net_packet.cpp" />
+    <ClCompile Include="net_thread.cpp" />
+    <ClCompile Include="packet_splitter.cpp" />
+    <ClCompile Include="reactor.cpp" />
+    <ClCompile Include="select_reactor.cpp" />
+    <ClCompile Include="send_task.cpp" />
+    <ClCompile Include="sock_acceptor.cpp" />
+    <ClCompile Include="sock_connector.cpp" />
+    <ClCompile Include="sock_dgram.cpp" />
+    <ClCompile Include="sock_stream.cpp" />
+    <ClCompile Include="task_base.cpp" />
+    <ClCompile Include="thread_mutex.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="afpacket_splitter.h" />
+    <ClInclude Include="block_buffer.h" />
+    <ClInclude Include="buildconfig.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="cycle_buffer.h" />
+    <ClInclude Include="epoll_reactor.h" />
+    <ClInclude Include="event_handler.h" />
+    <ClInclude Include="id_manager.h" />
+    <ClInclude Include="inet_addr.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="network_pch.h" />
+    <ClInclude Include="net_event.h" />
+    <ClInclude Include="net_manager.h" />
+    <ClInclude Include="net_packet.h" />
+    <ClInclude Include="net_thread.h" />
+    <ClInclude Include="os.h" />
+    <ClInclude Include="packet_splitter.h" />
+    <ClInclude Include="pool_allocator.h" />
+    <ClInclude Include="reactor.h" />
+    <ClInclude Include="select_reactor.h" />
+    <ClInclude Include="send_task.h" />
+    <ClInclude Include="sock_acceptor.h" />
+    <ClInclude Include="sock_connector.h" />
+    <ClInclude Include="sock_dgram.h" />
+    <ClInclude Include="sock_stream.h" />
+    <ClInclude Include="task_base.h" />
+    <ClInclude Include="thread_mutex.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D73BC628-88AF-4B49-8C39-6EC21EE120FF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>network</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>network_pch.h</PrecompiledHeaderFile>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,4 +1,6 @@
 *.cmake
+*.user
+Debug
 CMakeCache.txt
 CMakeFiles
 Makefile
