@@ -1,5 +1,5 @@
 #include "network_pch.h"
-#include "afpacket_splitter.h"
+#include "cli_packet_splitter.h"
 #include "sock_stream.h"
 #include "net_manager.h"
 #include "log.h"
@@ -13,7 +13,7 @@ SOCK_Stream::SOCK_Stream(uint32_t id, Net_Manager *net_manager, SOCKET socket, c
     m_local_addr = local_addr;
     m_remote_addr = remote_addr;
     m_net_manager = net_manager;
-    m_packet_splitter = CnNew AfPacket_Splitter;
+    m_packet_splitter = CnNew Cli_Packet_Splitter;
     m_current_send_packet = nullptr;
     m_current_send_length = 0;
     m_UserData = pUserData;

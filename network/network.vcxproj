@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="afpacket_splitter.cpp" />
+    <ClCompile Include="cli_packet_splitter.cpp" />
     <ClCompile Include="epoll_reactor.cpp" />
     <ClCompile Include="event_handler.cpp" />
     <ClCompile Include="id_manager.cpp" />
@@ -36,9 +36,9 @@
     <ClCompile Include="thread_mutex.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="afpacket_splitter.h" />
     <ClInclude Include="block_buffer.h" />
     <ClInclude Include="buildconfig.h" />
+    <ClInclude Include="cli_packet_splitter.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="cycle_buffer.h" />
     <ClInclude Include="epoll_reactor.h" />

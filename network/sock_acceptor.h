@@ -7,7 +7,7 @@
 #include "inet_addr.h"
 
 class Net_Manager;
-class Packet_Splitter;
+class IPacket_Splitter;
 
 
 //! @class SOCK_Acceptor
@@ -77,7 +77,7 @@ private:
     Net_Manager *m_net_manager;
 
     //! 拆包器
-    Packet_Splitter* m_packet_splitter;
+    IPacket_Splitter* m_packet_splitter;
 
     //! 事件回调
     void* m_UserData;

@@ -3,13 +3,13 @@
 
 
 
-//! @class Packet_Splitter
+//! @class IPacket_Splitter
 //! @brief tcp拆包接口
-class Packet_Splitter
+class IPacket_Splitter
 {
 public:
-    Packet_Splitter();
-	virtual ~Packet_Splitter();
+    IPacket_Splitter();
+	virtual ~IPacket_Splitter();
 
 	//! 拆包
 	//! @param buf 数据缓存

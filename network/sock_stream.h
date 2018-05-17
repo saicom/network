@@ -97,7 +97,7 @@ private:
 	Net_Manager *m_net_manager;
 
 	//! 拆包器
-	Packet_Splitter* m_packet_splitter;
+	IPacket_Splitter* m_packet_splitter;
 
 	//! 接受缓存
 	Block_Buffer_T<RECV_BUFFER_LENGTH> m_recv_buffer;

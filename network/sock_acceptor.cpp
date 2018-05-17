@@ -4,7 +4,7 @@
 #include "sock_stream.h"
 #include "net_manager.h"
 #include "log.h"
-#include "afpacket_splitter.h"
+#include "cli_packet_splitter.h"
 
 
 
@@ -16,7 +16,7 @@ SOCK_Acceptor::SOCK_Acceptor(Net_Manager *net_manager, void* pUserData, bool use
 
     m_socket = INVALID_SOCKET;
     m_net_manager = net_manager;
-    m_packet_splitter = CnNew AfPacket_Splitter;
+    m_packet_splitter = CnNew Cli_Packet_Splitter;
     m_UserData = pUserData;
     m_use_big_queue = useBigQueue;
 }

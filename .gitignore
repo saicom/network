@@ -1,5 +1,6 @@
 *.cmake
 *.user
+.vs
 Debug
 CMakeCache.txt
 CMakeFiles

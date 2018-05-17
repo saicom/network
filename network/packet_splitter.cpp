@@ -4,12 +4,12 @@
 
 // class Packet_Splitter
 
-Packet_Splitter::Packet_Splitter()
+IPacket_Splitter::IPacket_Splitter()
 {
 
 }
 
-Packet_Splitter::~Packet_Splitter()
+IPacket_Splitter::~IPacket_Splitter()
 {
 }
 

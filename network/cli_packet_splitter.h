@@ -1,4 +1,4 @@
-//! @file afpacket_splitter.h
+//! @file cli_packet_splitter.h
 #pragma once
 
 
@@ -18,12 +18,12 @@ struct TcpMsgHead {
 
 //! @class Packet_Splitter
 //! @brief tcp拆包接口
-class AfPacket_Splitter : public Packet_Splitter
+class Cli_Packet_Splitter : public IPacket_Splitter
 {
 public:
-    AfPacket_Splitter();
+	Cli_Packet_Splitter();
 
-    virtual ~AfPacket_Splitter();
+    virtual ~Cli_Packet_Splitter();
 
     //! 拆包
     //! @param buf 数据缓存

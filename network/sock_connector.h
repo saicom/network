@@ -8,7 +8,6 @@
 
 class Net_Manager;
 class Packet_Splitter;
-class SplitterFactory;
 
 
 //! @class SOCK_Connector
@@ -83,8 +82,7 @@ private:
     Net_Manager *m_net_manager;
 
     //! 拆包器
-    Packet_Splitter*    m_packet_splitter;
-    SplitterFactory*    m_splitter_factory;
+    IPacket_Splitter*    m_packet_splitter;
 
     //! 用户自定义数据
     void* m_UserData;
